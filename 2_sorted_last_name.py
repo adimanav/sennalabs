@@ -1,5 +1,4 @@
 import csv
-from collections import defaultdict
 
 class SortedLastName:
     dictionary = dict()
@@ -8,7 +7,7 @@ class SortedLastName:
         with open(filename, 'rt') as f:
             data = csv.reader(f)
             for row in data:
-                self.dictionary[row[1]] = row[0] + row[1]
+                self.dictionary[row[1]] = row[0].strip() + " " + row[1].strip()
             
     def output(self):
         keys = []
