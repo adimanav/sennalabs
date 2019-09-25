@@ -7,7 +7,8 @@ class SortedLastName:
         with open(filename, 'rt') as f:
             data = csv.reader(f)
             for row in data:
-                self.dictionary[row[1]] = row[0].strip() + " " + row[1].strip()
+                if (row[0] != "FirstName" and row[1] != "LastName"):
+                    self.dictionary[row[1]] = row[0].strip() + " " + row[1].strip()
             
     def output(self):
         keys = []
@@ -17,8 +18,12 @@ class SortedLastName:
 
         keys.sort()
 
+        result = []
         for key in keys:
-            print(self.dictionary[key])
+            result.insert(len(result), self.dictionary[key])
+        return result
 
-sln = SortedLastName("names.csv")
-sln.output()
+if __name__ == '__main__':
+    sln = SortedLastName("names.csv")
+    result = sln.output()
+    print(result)

@@ -17,6 +17,8 @@ class LotteryComb:
             out.append(padding + str(left) + str(rem))
         return out
 
-lc = LotteryComb(120888)
-out = lc.output()
-print(out)
+if __name__ == '__main__':
+    lc = LotteryComb(120888)
+    out = lc.output()
+    print(out)
+
