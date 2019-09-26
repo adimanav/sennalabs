@@ -1,0 +1,10 @@
+- A recent project that I worked on that I'm proud of is the last project I worked on for Agoda. 
+- It involved leveraging machine learning for auto response of questions asked by customers regarding properties.
+- I worked on the Python based scalable auto-response API and consumed ML library developed by the data scientist.
+- I worked as part of a team of 3 developers on this project.
+- I was responsible for setting up the uWSGI based API and dockerizing it. 
+- Some work went into tweaking the uWSGI parameters like queue size etc. to attain a service level agreement 
+on not dropping any calls.
+- Docker-compose was used to spawn multiple instances of the API on different servers and data centers.
+- I also worked on setting up Teamcity builds and deployments on production.
+- The project was a success and we achieved 30% more auto-responses.
