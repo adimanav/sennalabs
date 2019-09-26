@@ -13,3 +13,4 @@
 9. <code>cd scrape_bnk48</code>
    <code>python scrape_bnk48.py</code>
 10. <code>python singleton.py</code>
+11. Read recent_project.txt
