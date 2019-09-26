@@ -1,6 +1,7 @@
 import urllib.request
 from bs4 import BeautifulSoup
 import urllib
+import sys
 
 class ScrapeBnk48:
     url = "https://www.bnk48.com/index.php?page=members"
@@ -17,7 +18,7 @@ class ScrapeBnk48:
             actualUrl = "https://www.bnk48.com/" + actualUrl
             nameMemDiv = div.findChildren("div", {"class": "nameMem"})[0]
             fileName = nameMemDiv.text.strip() + ".png"
-            fileName = fileName
+            fileName = fileName.encode("utf8")
             print(fileName)
             urllib.request.urlretrieve(actualUrl, fileName)
 
